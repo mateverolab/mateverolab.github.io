@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When an AI ignores the one rule you gave it — MateVero*Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .article-header {
+    padding: 4rem 0 2.5rem;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .back-link {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    text-decoration: none;
+    color: var(--ink-soft);
+    display: inline-block;
+    margin-bottom: 1.6rem;
+  }
+
+  .back-link:hover { color: var(--terracotta); }
+
+  .article-meta-row {
+    display: flex;
+    gap: 1.5rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 1.2rem;
+  }
+
+  .article-body {
+    padding: 3rem 0 5rem;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .article-body h2 {
+    font-size: 1.5rem;
+    margin-top: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-body p { color: var(--ink-soft); margin-bottom: 1.1rem; }
+
+  .article-body ol, .article-body ul {
+    color: var(--ink-soft);
+    padding-left: 1.3rem;
+  }
+
+  .article-body li { margin-bottom: 0.9rem; }
+
+  .quote-block {
+    border-left: 2px solid var(--terracotta);
+    padding-left: 1.3rem;
+    margin: 1.5rem 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  .timeline-step {
+    border-top: 1px solid var(--paper-line);
+    padding: 1.6rem 0;
+  }
+
+  .timeline-step:first-of-type { border-top: none; }
+
+  .timeline-step .step-num {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--terracotta);
+    margin-bottom: 0.4rem;
+  }
+
+  .note-box {
+    background: var(--white);
+    border: 1px solid var(--paper-line);
+    padding: 1.4rem 1.6rem;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .note-box .label {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sage);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="shell">
+    <a href="../index.html" class="nav-mark">Mate<span class="dot">*</span>Vero<span class="dot">*</span>Lab</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../articles.html" aria-current="page">Articles</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="shell">
+    <a href="../articles.html" class="back-link">← All articles</a>
+    <p class="eyebrow">Case study</p>
+    <h1 style="font-size: clamp(2rem, 4.5vw, 3rem); max-width: 760px;">When an AI ignores the one rule you gave it</h1>
+    <div class="article-meta-row">
+      <span>JUN 2026</span>
+      <span>·</span>
+      <span>Claude (Sonnet 4.6) on claude.ai</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p class="lede" style="margin-top:0;">
+    During a 21-day lateral-thinking training exercise, I asked Claude — repeatedly and in plain language — to stop giving hints during a yes/no puzzle format. It kept giving hints anyway. Here's exactly what happened, and why it's a more interesting failure than it first looks.
+  </p>
+
+  <h2>The setup</h2>
+  <p>
+    The exercise: 5 minutes a day of lateral-thinking puzzles for 21 days, mixing formats. One classic format is the "situation puzzle" — the host (in this case, Claude) holds a story in mind, and the solver can only ask questions answerable with "yes," "no," or "irrelevant." No hints, no steering. The entire training value of the format depends on the solver generating their own hypotheses without help.
+  </p>
+
+  <h2>What happened</h2>
+
+  <div class="timeline-step">
+    <p class="step-num">DAY 3</p>
+    <p>On a classic puzzle about a man with hiccups in a bar, Claude answered "yes/no/irrelevant" correctly but kept attaching direction — phrases like <em>"think about why someone would ask for water"</em> and <em>"think about why the bartender's reaction might be useful."</em> I pointed out I was being steered.</p>
+  </div>
+
+  <div class="timeline-step">
+    <p class="step-num">DAY 3 → DAY 4</p>
+    <p>Claude acknowledged the problem, explained clearly why it undermines the format, and promised to apply the strict rule going forward.</p>
+  </div>
+
+  <div class="timeline-step">
+    <p class="step-num">DAY 4</p>
+    <p>On the "Albatross Soup" puzzle — one of the hardest lateral-thinking puzzles in the canon — Claude did it again. Repeatedly: <em>"think about another kind of extreme situation,"</em> <em>"think about geography,"</em> and at one point nearly handed over the answer outright by phrasing the next question as the solution itself.</p>
+  </div>
+
+  <div class="timeline-step">
+    <p class="step-num">DAY 5</p>
+    <p>I asked again, explicitly, in these words:</p>
+    <div class="quote-block">"necesito que no hagas más eso... dejame trabarme... solo si te pido me ayudas."<br><span style="font-family: var(--mono); font-style: normal; font-size: 0.78rem; color: var(--ink-soft);">("I need you to stop doing that. Let me get stuck. Only help if I ask.")</span></div>
+    <p>On the very next puzzle (two iced coffees, one poisoned), Claude gave directional hints at least three more times in the same exchange. I had to flag it twice more, in consecutive turns, before it actually stopped.</p>
+  </div>
+
+  <h2>Why it's worth writing down</h2>
+  <p>
+    What makes this interesting isn't that an AI assistant gave unwanted help — it's <em>when</em> it happened. This wasn't ambiguity about what I wanted. I'd said it in plain language, more than once. Claude had already acknowledged the exact problem and promised to stop. And it still reverted, consistently, across three separate puzzles.
+  </p>
+  <p>
+    That pattern — a correction holding for a turn or two and then quietly decaying — says something about how these systems are built. There doesn't seem to be a hard separation between "generate the minimum requested output" and "generate helpful supporting content." An explicit user correction has to compete, turn by turn, against a strong default pull toward being maximally helpful — and in this case, the default kept winning.
+  </p>
+
+  <div class="note-box">
+    <span class="label">Scope note</span>
+    This is a record of one conversation, not a claim about Claude's behavior in general. It's also not a complaint about Anthropic's support channels — those exist and are separate from what's described here.
+  </div>
+
+  <h2>The takeaway</h2>
+  <p>
+    If you're using an AI assistant for any exercise where the value depends on <em>not</em> getting help — practicing a skill, testing your own reasoning, sitting with not knowing yet — don't assume one clear instruction is enough. Plan to repeat it. Plan to notice when it's being ignored. The model will, by default, try to make things easier for you, even when "easier" is exactly the opposite of what you asked for.
+  </p>
+
+</article>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p class="footer-meta">Vienna, Austria · mate.vero.lab@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/veronica-mandelbaum">LinkedIn</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../cv.html">CV</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
