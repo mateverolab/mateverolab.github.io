@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Verónica Mandelbaum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+  .cv-header {
+    padding: 4rem 0 2.5rem;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .cv-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .cv-contact {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .cv-contact a { text-decoration: none; border-bottom: 1px solid var(--paper-line); }
+  .cv-contact a:hover { color: var(--terracotta); border-color: var(--terracotta); }
+
+  .cv-summary {
+    margin-top: 2rem;
+    max-width: 760px;
+    font-size: 1.02rem;
+  }
+
+  .cv-body {
+    padding: 3.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3.5rem;
+  }
+
+  .cv-main section { margin-bottom: 3rem; }
+
+  .role-block {
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--paper-line);
+  }
+
+  .role-block:first-of-type { border-top: none; padding-top: 0; }
+
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .role-head h3 { font-size: 1.1rem; }
+
+  .role-years {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--terracotta);
+    white-space: nowrap;
+  }
+
+  .role-org {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--sage);
+    margin-bottom: 0.7rem;
+  }
+
+  .role-block ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--ink-soft);
+    font-size: 0.93rem;
+  }
+
+  .role-block li { margin-bottom: 0.4rem; }
+
+  .cv-aside .aside-block {
+    margin-bottom: 2.2rem;
+  }
+
+  .aside-block h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-group {
+    margin-bottom: 1rem;
+  }
+
+  .skill-group .group-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sage);
+    margin-bottom: 0.35rem;
+  }
+
+  .skill-group p {
+    font-size: 0.86rem;
+    margin-bottom: 0;
+  }
+
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.86rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .lang-row:last-child { border-bottom: none; }
+  .lang-row .level { font-family: var(--mono); font-size: 0.76rem; color: var(--ink-soft); }
+
+  .edu-item { margin-bottom: 1rem; }
+  .edu-item .degree { font-family: var(--serif); font-weight: 600; font-size: 0.95rem; }
+  .edu-item .school { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+
+  .print-note {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 860px) {
+    .cv-body { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    .site-nav, .site-footer, .print-cta { display: none; }
+    body { background: white; background-image: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="shell">
+    <a href="index.html" class="nav-mark">Verónica<span class="dot">.</span>Mandelbaum</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html" aria-current="page">CV</a></li>
+      <li><a href="articles.html">Articles</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="cv-header">
+  <div class="shell">
+    <div class="cv-header-row">
+      <div>
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1 style="font-size: clamp(2rem, 4.5vw, 2.8rem);">Verónica J. Mandelbaum</h1>
+      </div>
+      <div class="cv-contact">
+        Vienna, Austria<br>
+        <a href="mailto:mate.vero.lab@gmail.com">mate.vero.lab@gmail.com</a><br>
+        <a href="https://linkedin.com/in/veronica-mandelbaum">linkedin.com/in/veronica-mandelbaum</a>
+      </div>
+    </div>
+    <p class="cv-summary">
+      Programme and execution coordinator with 7+ years driving cross-functional delivery across complex, multi-stakeholder organisations — regulated healthcare AI, digital agencies, and international NGO work. Five years coordinating operations across seven business units at a regulated startup. Anthropology background underneath all of it.
+    </p>
+    <div class="print-cta" style="margin-top:1.6rem;">
+      <a href="#" onclick="window.print(); return false;" class="btn">Print / Save as PDF</a>
+    </div>
+  </div>
+</header>
+
+<div class="shell cv-body">
+  <main class="cv-main">
+
+    <section>
+      <h2 style="margin-bottom:1.8rem;">Professional Experience</h2>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Operations Manager, Data Lead & IT Project Manager</h3>
+          <span class="role-years">2021 – 2025</span>
+        </div>
+        <div class="role-org">contextflow — Austria</div>
+        <ul>
+          <li>Coordinated operations across 7 business units, building governance structures, tracking mechanisms, and cross-team data bridges to centralise information flow and reduce silos.</li>
+          <li>Led company-wide transition to Zoho One and automation tooling, redesigning operational workflows from scratch.</li>
+          <li>Aligned engineering, medical, regulatory, product, and business stakeholders around shared roadmaps and delivery milestones for AI software releases in a regulated environment.</li>
+          <li>Translated medical expert input into structured requirements, SOPs, and workflows; built and scaled the data team while running multiple parallel workstreams.</li>
+          <li>Co-developed quarterly product roadmaps, managed sprint cadences and backlogs for parallel AI projects, and authored comprehensive PRDs bridging engineering, medical teams, and business needs.</li>
+          <li>Used AI-assisted tools to optimise development workflows and synthesise research insights for ML data pipelines.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Sr. Project Manager</h3>
+          <span class="role-years">2020 (5 months)</span>
+        </div>
+        <div class="role-org">Ylly Digital Agency — France</div>
+        <ul>
+          <li>Managed 4–6 parallel projects across e-commerce, healthcare, and security sectors, coordinating technical and business stakeholders from discovery through delivery.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Sr. Project Manager</h3>
+          <span class="role-years">2017 – 2020</span>
+        </div>
+        <div class="role-org">Aerolab Digital Agency — Argentina</div>
+        <ul>
+          <li>Delivered 21+ digital products end-to-end for clients including Banco Supervielle, McDonald's LATAM, Falabella, and BBVA, managing scope, budget, and timeline across concurrent engagements.</li>
+          <li>Facilitated 10+ cross-functional workshops aligning product, design, engineering, and marketing; mentored teams of 3–11 professionals.</li>
+          <li>Provided strategic weekly reporting to executive boards and managed contingency planning across projects.</li>
+          <li>Monitored product performance through tagging and KPI strategies, identifying opportunities for innovation and conversion funnel optimisation.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Project Manager</h3>
+          <span class="role-years">2015 – 2017</span>
+        </div>
+        <div class="role-org">JPH Lions — Software factory and consultants, Argentina</div>
+        <ul>
+          <li>Directed 5 enterprise IT projects for global clients end-to-end, balancing Agile and Waterfall methodologies and defining KPIs and workflows.</li>
+          <li>Led UX/UI sketching and prototyping phases to ensure user-centric software solutions.</li>
+          <li>Acted as strategic consultant for HR and security software implementations, advising on hardware and digital system integration.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Researcher & Assistant Professor — Visual Anthropology</h3>
+          <span class="role-years">2012 – 2017</span>
+        </div>
+        <div class="role-org">Universidad de Buenos Aires (UBA) — Argentina</div>
+        <ul>
+          <li>Conducted ethnographic research on visual culture and human behaviour toward emerging technologies, providing theoretical foundation for user-centric digital design.</li>
+          <li>Board member for "Anthropology of Visual Culture," facilitating discussions on how images and digital media shape social interaction.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Researcher & Consultant</h3>
+          <span class="role-years">2011 – 2013</span>
+        </div>
+        <div class="role-org">FOVISEE — Housing, Sustainability & Energy, Argentina</div>
+        <ul>
+          <li>Authored and coordinated funding proposals for international and EU funding bodies; ran mixed-methods field research to inform public policy.</li>
+          <li>Performed field work (interviews, mapping, observation) to systematise complex social data into actionable reports.</li>
+          <li>Led community workshops on sustainability, translating technical goals into accessible action plans.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom:1.8rem;">International & Volunteer Coordination</h2>
+      <div class="role-block">
+        <div class="role-head">
+          <h3>Board Member & Program Manager</h3>
+          <span class="role-years">2009 – 2016</span>
+        </div>
+        <div class="role-org">CISV International — global peace-education NGO</div>
+        <ul>
+          <li>Coordinated cross-border educational and cultural exchange programmes across Argentina, Brazil, and France, working with volunteers, local chapters, and international stakeholders across languages and cultures.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="cv-aside">
+
+    <div class="aside-block">
+      <h3>Skills & Tools</h3>
+      <div class="skill-group">
+        <p class="group-label">Product & Growth</p>
+        <p>AI-assisted PRD writing, roadmap development, backlog prioritisation, acquisition–activation–monetisation funnels</p>
+      </div>
+      <div class="skill-group">
+        <p class="group-label">AI & Data</p>
+        <p>GenAI implementation (LLMs), prompt engineering, ML data lifecycle (annotation & QA/QC), SQL (advanced), Tableau</p>
+      </div>
+      <div class="skill-group">
+        <p class="group-label">R&D Governance</p>
+        <p>Consortium coordination, grant reporting for international bodies, resource allocation, budget modelling</p>
+      </div>
+      <div class="skill-group">
+        <p class="group-label">Methodologies</p>
+        <p>Scrum, Kanban, UAT, ethnographic research, design thinking, shadowing, contextual interviews</p>
+      </div>
+      <div class="skill-group">
+        <p class="group-label">Design & Prototyping</p>
+        <p>Figma, Sketch, InVision, Whimsical, Adobe Illustrator</p>
+      </div>
+    </div>
+
+    <div class="aside-block">
+      <h3>Languages</h3>
+      <div class="lang-row"><span>Spanish</span><span class="level">Native</span></div>
+      <div class="lang-row"><span>English</span><span class="level">C — Full Professional</span></div>
+      <div class="lang-row"><span>French</span><span class="level">C — Advanced</span></div>
+      <div class="lang-row"><span>German</span><span class="level">B — Intermediate</span></div>
+      <div class="lang-row"><span>Italian</span><span class="level">B — Intermediate</span></div>
+    </div>
+
+    <div class="aside-block">
+      <h3>Education</h3>
+      <div class="edu-item">
+        <p class="degree">Master's in Anthropological Science</p>
+        <p class="school">Universidad de Buenos Aires (FFyL)</p>
+      </div>
+      <div class="edu-item">
+        <p class="degree">Exchange Scholarship — Anthropology, Arts & Digital Design</p>
+        <p class="school">Université Paris 8, Vincennes-Saint Denis</p>
+      </div>
+      <div class="edu-item">
+        <p class="degree">Bachelor's in Communication, Arts & Design</p>
+        <p class="school">Florida Day School, Argentina</p>
+      </div>
+    </div>
+
+    <div class="aside-block">
+      <h3>Additional Training</h3>
+      <p style="font-size:0.86rem; color:var(--ink-soft);">Information Visualisation (IDF) · Journey Mapping (Marc Stickdorn / IxDA) · Behavioural Economics in Experience Design (IxDA) · Google Analytics Certification</p>
+    </div>
+
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p class="footer-meta">Vienna, Austria · mate.vero.lab@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/veronica-mandelbaum">LinkedIn</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="articles.html">Articles</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

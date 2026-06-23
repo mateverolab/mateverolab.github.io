@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MateVero*Lab — Field notes on operations, AI, and anthropology</title>
+<meta name="description" content="Programme and operations coordinator working at the seam between regulated AI, international NGOs, and anthropology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .hero h1 {
+    margin-top: 0.6rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.6rem;
+  }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--paper-line);
+    border-radius: 100px;
+    color: var(--ink-soft);
+    background: var(--white);
+  }
+
+  .hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-aside {
+    border-left: 1px solid var(--paper-line);
+    padding-left: 2rem;
+  }
+
+  .hero-aside .label {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--sage);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-aside .value {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    margin-bottom: 1.4rem;
+  }
+
+  /* ---------- Translation diagram (signature element) ---------- */
+
+  .diagram-section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .diagram-intro {
+    max-width: 620px;
+    margin-bottom: 3rem;
+  }
+
+  .diagram-wrap {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .node-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    fill: var(--ink);
+  }
+
+  .node-sublabel {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    fill: var(--ink-soft);
+  }
+
+  .center-label {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 15px;
+    fill: var(--paper);
+  }
+
+  /* ---------- Path sections ---------- */
+
+  .path-section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .path-list {
+    display: grid;
+    gap: 0;
+  }
+
+  .path-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 220px;
+    gap: 1.5rem;
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--paper-line);
+    align-items: baseline;
+  }
+
+  .path-row:first-of-type {
+    border-top: none;
+  }
+
+  .path-years {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--terracotta);
+    letter-spacing: 0.02em;
+  }
+
+  .path-role h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .path-role .org {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  .path-desc {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-aside { border-left: none; padding-left: 0; border-top: 1px solid var(--paper-line); padding-top: 1.5rem; }
+    .path-row { grid-template-columns: 1fr; gap: 0.4rem; }
+    .path-desc { text-align: left; }
+  }
+
+  /* ---------- Articles teaser ---------- */
+
+  .teaser-section { padding: 5rem 0; }
+
+  .teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .teaser-card {
+    border: 1px solid var(--paper-line);
+    background: var(--white);
+    padding: 1.8rem;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .teaser-card:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+  }
+
+  .teaser-card .eyebrow { margin-bottom: 0.6rem; }
+  .teaser-card h3 { margin-bottom: 0.5rem; }
+  .teaser-card p { font-size: 0.92rem; margin-bottom: 0; }
+
+  @media (max-width: 700px) {
+    .teaser-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="shell">
+    <a href="index.html" class="nav-mark">Mate<span class="dot">*</span>Vero<span class="dot">*</span>Lab</a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="articles.html">Articles</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="shell hero-grid">
+    <div>
+      <p class="eyebrow">Programme & Operations Coordinator</p>
+      <h1>Translating between<br><em>medicine, code,</em><br>and community.</h1>
+      <p class="lede" style="margin-top:1.4rem;">
+        Seven years coordinating delivery across regulated healthcare AI, digital agencies, and international NGOs — with an anthropology degree underneath all of it, asking what people actually need before anyone writes a spec.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">7 business units</span>
+        <span class="hero-tag">Healthcare AI</span>
+        <span class="hero-tag">21+ products delivered</span>
+        <span class="hero-tag">5 countries</span>
+      </div>
+      <div class="hero-actions">
+        <a href="cv.html" class="btn btn-solid">View CV →</a>
+        <a href="articles.html" class="btn">Read the field notes</a>
+      </div>
+    </div>
+    <aside class="hero-aside">
+      <p class="label">Based in</p>
+      <p class="value">Vienna, Austria</p>
+      <p class="label">Currently</p>
+      <p class="value">Open to programme & ops roles</p>
+      <p class="label">Languages</p>
+      <p class="value" style="font-size:0.95rem;">EN · ES · FR · DE · IT</p>
+    </aside>
+  </div>
+</header>
+
+<section class="diagram-section">
+  <div class="shell">
+    <div class="diagram-intro">
+      <p class="eyebrow">How the work actually moves</p>
+      <h2>One coordinator, four languages nobody else speaks at once.</h2>
+      <p style="margin-top:1rem;">Every project lives at a seam: medical experts who think in caveats, engineers who think in tickets, communities who think in seasons, and funders who think in line items. The job is holding all four translations in your head simultaneously — and writing down what's true in each one.</p>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing Verónica as the central translator between medical/regulatory, engineering, community, and funding worlds">
+        <!-- connecting lines -->
+        <g stroke="#9C6644" stroke-width="1.3" fill="none" opacity="0.55">
+          <path d="M 450 240 L 200 110" />
+          <path d="M 450 240 L 700 110" />
+          <path d="M 450 240 L 200 380" />
+          <path d="M 450 240 L 700 380" />
+        </g>
+        <g stroke="#5B7C72" stroke-width="1" fill="none" stroke-dasharray="2 4" opacity="0.5">
+          <path d="M 200 110 Q 450 60 700 110" />
+          <path d="M 200 380 Q 450 430 700 380" />
+        </g>
+
+        <!-- center node -->
+        <circle cx="450" cy="240" r="58" fill="#1F2421" />
+        <text x="450" y="236" text-anchor="middle" class="center-label">Verónica</text>
+        <text x="450" y="254" text-anchor="middle" class="node-sublabel" fill="#C9A66B">coordinator</text>
+
+        <!-- node: medical/regulatory -->
+        <circle cx="200" cy="110" r="42" fill="#FFFFFF" stroke="#9C6644" stroke-width="1.5" />
+        <text x="200" y="106" text-anchor="middle" class="node-label">Medical &</text>
+        <text x="200" y="120" text-anchor="middle" class="node-label">Regulatory</text>
+
+        <!-- node: engineering -->
+        <circle cx="700" cy="110" r="42" fill="#FFFFFF" stroke="#9C6644" stroke-width="1.5" />
+        <text x="700" y="106" text-anchor="middle" class="node-label">Engineering</text>
+        <text x="700" y="120" text-anchor="middle" class="node-label">& Product</text>
+
+        <!-- node: community -->
+        <circle cx="200" cy="380" r="42" fill="#FFFFFF" stroke="#5B7C72" stroke-width="1.5" />
+        <text x="200" y="376" text-anchor="middle" class="node-label">Communities</text>
+        <text x="200" y="390" text-anchor="middle" class="node-label">& Volunteers</text>
+
+        <!-- node: funding -->
+        <circle cx="700" cy="380" r="42" fill="#FFFFFF" stroke="#5B7C72" stroke-width="1.5" />
+        <text x="700" y="376" text-anchor="middle" class="node-label">Funders &</text>
+        <text x="700" y="390" text-anchor="middle" class="node-label">Executives</text>
+
+        <!-- small annotations -->
+        <text x="200" y="155" text-anchor="middle" class="node-sublabel">contextflow</text>
+        <text x="700" y="155" text-anchor="middle" class="node-sublabel">contextflow · Aerolab</text>
+        <text x="200" y="345" text-anchor="middle" class="node-sublabel">CISV · FOVISEE</text>
+        <text x="700" y="345" text-anchor="middle" class="node-sublabel">Banco Supervielle · BBVA</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="path-section">
+  <div class="shell">
+    <p class="eyebrow">A non-linear path, on purpose</p>
+    <h2>From fieldwork in Buenos Aires<br>to AI pipelines in Vienna.</h2>
+
+    <div class="path-list" style="margin-top:2.5rem;">
+      <div class="path-row">
+        <div class="path-years">2021—2025</div>
+        <div class="path-role">
+          <h3>Operations Manager & Data Lead</h3>
+          <div class="org">contextflow — Vienna</div>
+        </div>
+        <div class="path-desc">7 business units, one governance structure, zero silos left standing.</div>
+      </div>
+      <div class="path-row">
+        <div class="path-years">2017—2020</div>
+        <div class="path-role">
+          <h3>Sr. Project Manager</h3>
+          <div class="org">Aerolab — Argentina / France</div>
+        </div>
+        <div class="path-desc">21+ products, clients from Falabella to BBVA, teams up to 11 people.</div>
+      </div>
+      <div class="path-row">
+        <div class="path-years">2015—2017</div>
+        <div class="path-role">
+          <h3>Project Manager</h3>
+          <div class="org">JPH Lions — Argentina</div>
+        </div>
+        <div class="path-desc">5 enterprise builds, Agile and Waterfall, whichever the client actually needed.</div>
+      </div>
+      <div class="path-row">
+        <div class="path-years">2009—2017</div>
+        <div class="path-role">
+          <h3>Researcher, then Coordinator</h3>
+          <div class="org">UBA · FOVISEE · CISV International</div>
+        </div>
+        <div class="path-desc">Where the questions started: how people actually use the things built for them.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teaser-section">
+  <div class="shell">
+    <p class="eyebrow">Field notes</p>
+    <h2>Writing, mostly about thinking in public.</h2>
+    <div class="teaser-grid">
+      <a href="articles.html" class="teaser-card">
+        <p class="eyebrow">Case study</p>
+        <h3>When an AI ignores the one rule you gave it</h3>
+        <p>A close read of what happened across a 21-day puzzle exercise — and why "just give a hint" turns out to be a surprisingly hard instruction to enforce.</p>
+      </a>
+      <a href="articles.html" class="teaser-card">
+        <p class="eyebrow">Coming soon</p>
+        <h3>More notes from the seam</h3>
+        <p>Operations, anthropology, and the translation work nobody puts on a roadmap.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p class="footer-meta">Vienna, Austria · mate.vero.lab@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/veronica-mandelbaum">LinkedIn</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="articles.html">Articles</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

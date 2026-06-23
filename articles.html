@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — MateVero*Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .articles-header {
+    padding: 4rem 0 2.5rem;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .articles-list {
+    padding: 3rem 0;
+  }
+
+  .article-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 100px;
+    gap: 2rem;
+    align-items: baseline;
+    padding: 2rem 0;
+    border-top: 1px solid var(--paper-line);
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .article-row:first-of-type { border-top: none; }
+  .article-row:hover { opacity: 0.7; }
+
+  .article-date {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .article-row h3 { margin-bottom: 0.5rem; }
+  .article-row p { font-size: 0.92rem; margin-bottom: 0; }
+
+  .article-arrow {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--terracotta);
+    text-align: right;
+  }
+
+  @media (max-width: 700px) {
+    .article-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .article-arrow { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="shell">
+    <a href="index.html" class="nav-mark">Mate<span class="dot">*</span>Vero<span class="dot">*</span>Lab</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="articles.html" aria-current="page">Articles</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="articles-header">
+  <div class="shell">
+    <p class="eyebrow">Field notes</p>
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.2rem);">Articles & discussions</h1>
+    <p class="lede" style="margin-top:1rem;">Notes from the seam between operations, AI, and anthropology — written in public, not polished into LinkedIn shape.</p>
+  </div>
+</header>
+
+<section class="articles-list">
+  <div class="shell">
+    <a href="articles/claude-yes-no-case-study.html" class="article-row">
+      <span class="article-date">JUN 2026</span>
+      <div>
+        <h3>When an AI ignores the one rule you gave it</h3>
+        <p>A case study from a 21-day lateral-thinking exercise: what happened when Claude was asked, repeatedly and explicitly, to stop giving hints — and didn't.</p>
+      </div>
+      <span class="article-arrow">Read →</span>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p class="footer-meta">Vienna, Austria · mate.vero.lab@gmail.com</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/veronica-mandelbaum">LinkedIn</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
